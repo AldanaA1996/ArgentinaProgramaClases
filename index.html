@@ -73,7 +73,7 @@
 	<header class="hero">
 		<nav class="nav container">
 			<div class="nav__logo">
-				<img class= "nav__title" src="./Imagenes/44119286.jpg" alt="Logo del Gimnasio XYZ" width="70px" height="60px">
+				<img class= "nav__title" src="./Imagenes/44119286.jpg" alt="Logo del Gimnasio" width="70px" height="60px">
 			</div>
 			<ul class="nav__link nav__link--menu">
 				<li class="nav__items">
@@ -100,7 +100,7 @@
 	<section class="hero__container container">
 		<h1 class="hero__title">TITAN FITNESS</h1>
 		<p class="hero__paragraph">Transforma tu cuerpo, transforma tu vida</p>
-		<a href="#" class="reserva">COMIENZA AHORA</a>
+		<a href="#paquetes" class="reserva">COMIENZA AHORA</a>
 	</section>
 	</header>	
 	<main>
@@ -146,7 +146,7 @@
 					<p class="knowledge__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
 						Quae quisquam perferendis soluta. Sed beatae temporibus harum ipsum dicta, nam quam amet 
 						nesciunt vero impedit deserunt fuga ipsam ex cumque eos.</p>
-					<a href="#" class="reserva">Reserva ya tu turno</a>
+					<a href="#paquetes" class="reserva">Reserva ya tu turno</a>
 					
 				</div>
 				<figure class="knowledge__picture">
@@ -236,38 +236,38 @@
 	
 	
 		<footer class="bg-light" id="contacto">
-			<div class="container">
+			<div class="form_container">
 			  <div class="row">
-				<div class="col-md-4">
-					<h1>Formulario de contacto</h1>
+				
+				<h1>Formulario de contacto</h1>
    
 					<div id="section1">
-						<h2>Sección 1 - Nombre y Edad</h2>
+						<h4>Nombre y Edad</h4>
 						<label for="nombre">Nombre:</label>
-						<input type="text" id="nombre" name="nombre" class="required"><br><br>
+						<input type="text" id="nombre" name="nombre" required><br><br>
 						
 						<label for="edad">Edad:</label>
-						<input type="number" id="edad" name="edad" class="required"><br><br>
+						<input type="number" id="edad" name="edad" required><br><br>
 						
 						<button type="button" onclick="nextSection()">Siguiente</button>
 					  </div>
 					  
 					  <div id="section2" style="display:none">
-						<h2>Sección 2 - Teléfono y Email</h2>
+						<h4>Teléfono y Email</h4>
 						<label for="telefono">Teléfono:</label>
-						<input type="tel" id="telefono" name="telefono" class="required"><br><br>
+						<input type="tel" id="telefono" name="telefono" required><br><br>
 						
 						<label for="email">Email:</label>
-						<input type="email" id="email" name="email" class="required"><br><br>
+						<input type="email" id="email" name="email" required><br><br>
 						
 						<button type="button" onclick="prevSection()">Anterior</button>
 						<button type="button" onclick="nextSection()">Siguiente</button>
 					  </div>
 					  
 					  <div id="section3" style="display:none">
-						<h2>Sección 3 - Cuando te gustaria iniciar  ? </h2>
+						<h4>¿Cuando te gustaria iniciar? </h4>
 						<label for="fecha">Fecha:</label>
-						<input type="date" id="fecha" name="fecha" class="required"><br><br>
+						<input type="date" id="fecha" name="fecha" required><br><br>
 						
 						
 						
@@ -276,7 +276,7 @@
 					  </div>
 					  
 					  <div id="section4" style="display:none">
-						<h2>Sección 4 - Enfermedades</h2>
+						<h4>Enfermedades</h4>
 						<label for="enfermedad">¿Padece alguna enfermedad que complique la actividad física?</label><br>
 						<input type="radio" id="si" name="enfermedad" value="si">
 						<label for="si">Sí</label><br>
@@ -286,8 +286,9 @@
 						<button type="button" onclick="prevSection()">Anterior</button>
 						<button type="submit">Enviar</button>
 					  </div>
-					  
+					
 					 <script>
+
 					  var currentSection = 1;
 					  var sectionCount = 4;
 					  
