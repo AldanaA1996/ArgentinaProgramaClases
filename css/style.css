@@ -9,8 +9,6 @@
 body {
     font-family: 'Rajdhani', sans-serif;
 	background-color: #f2f2f2;
-	
-
 }
 
 .container {
@@ -50,6 +48,7 @@ body {
 	height: 100%;
 	display: flex;
 	align-items: center;
+	font-family: 'Rajdhani', sans-serif;
 }
 
 .nav__link {
@@ -117,6 +116,7 @@ body {
 
 .about {
 	text-align: center;
+	background-color: #ffffff;
 }
 
 .subtitle {
@@ -155,7 +155,7 @@ body {
 }
 
 .knowledge{
-	background-color: #e5e5f7;
+	background-color: #ffffff;
 	opacity: 0.8;
 	background-image:  radial-gradient(#444cf7 0.5px, transparent 0.5px), radial-gradient(#444cf7 0.5px, #e5e5f7 0.5px);
 	background-size: 20px 20px;
@@ -169,6 +169,7 @@ body {
 	grid-template-columns: 1fr 1fr;
     gap: 1em;
     align-items: center;
+	
 }
 
 .knowledge__picture {
