@@ -115,27 +115,6 @@ body {
 	font-weight: 600;
 }
 
-/*css tarjetas*/
-/*.tarjetas-container {
-  position: relative;
-  width: 100%;
-  height: 400px;
-  overflow: hidden;
-}
-
-.tarjeta {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: none;
-}
-
-#tarjeta1 {
-  display: block;
-}*/
-
 .about {
 	text-align: center;
 }
@@ -246,11 +225,80 @@ body {
 	margin-bottom: 50px;
 	color: var(--color-items);
 }
-.price__reserva {
+
+.turnos {
 	display: block;
 	padding: 20px 0;
 	border-radius: 10px;
 	text-decoration: none;
 	font-weight: 600;
 	background-color: var(--color-reserva) ;
+    display: inline-block;
+	background-color: #dbbf1d;
+	justify-self: center;
+	color: black;
+	text-decoration: none;
+	padding: 13px 30px;
+	border-radius: 30px;
+	font-weight: 600;
 }
+.contact__container{
+    display: flex;
+    display: inline-block;
+   	display: grid;
+	width: 90%;
+	margin: 0 auto;
+	gap: 1em;
+	overflow: hidden;
+	grid-template-columns: repeat(auto-fit, minmax(260px, auto));
+    padding: 20px;
+    background-color: #c9c7c7;
+}
+
+.form {
+    margin-bottom: 30px;
+  }
+  
+  h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+  }
+  
+  input[type="text"],
+  input[type="tel"],
+  input[type="email"],
+  textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border:#dbbf1d;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+  }
+  
+  input[type="submit"] {
+    background-color: #2f2f2f;
+    color:#dbbf1d;
+    border: #000000;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    
+  }
+  
+  .email {
+    text-align: center;
+    font-size: 14px;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
