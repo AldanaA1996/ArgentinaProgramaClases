@@ -287,7 +287,7 @@
 						<button type="submit">Enviar</button>
 					  </div>
 					  
-					  <script>
+					 <script>
 					  var currentSection = 1;
 					  var sectionCount = 4;
 					  
@@ -325,7 +325,7 @@
 								required: true,
 								digits: true,
 								edadValida: true
-							  },
+                             },
 							  telefono: {
 								required: true,
 								digits: true,
@@ -353,25 +353,17 @@
 								required: "ingresa tu edad",
 								digits: "Ingresa solo números",
 								edadValida: "Debes ser mayor de edad para enviar el formulario"
+                            
 							  },
-							  telefono: {
-								required: "ingresa tu número de teléfono",
-								digits: "Ingresa solo números",
-								minlength: "Tu número de teléfono debe tener al menos 8 dígitos"
-							  },
-							  email: {
-								required: "ingresa tu dirección de correo electrónico",
-								email: "Ingresa una dirección de correo electrónico válida"
-							  },
-							  fecha: {
-								required: "ingresa una fecha"
-							  },
-							  enfermedad: {
-								required: "selecciona una opción"
-							  }
-							}
-						  });
-						});
+                              telefono: {
+                              required: "Ingresa tu número de teléfono",
+                             digits: "Ingresa solo números",
+                             minlength: "El número de teléfono debe tener al menos 8 dígitos",
+                             maxlength: "El número de teléfono no puede tener más de 10 dígitos"
+                            }
+    					}
+  					});
+				});
 					  </script>
 				  
 				<h4>Encontranos</h4>
