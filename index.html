@@ -80,13 +80,13 @@
 					<a href="#" class="nav__links">Inicio</a>
 				</li>
 				<li class="nav__items">
-					<a href="#" class="nav__links">Sobre Nosotros</a>
+					<a href="#nosotros" class="nav__links">Sobre Nosotros</a>
 				</li>
 				<li class="nav__items">
-					<a href="#" class="nav__links">Clases</a>
+					<a href="#paquetes" class="nav__links">Clases</a>
 				</li>
 				<li class="nav__items">
-					<a href="#" class="nav__links">Contacto</a>
+					<a href="#contacto" class="nav__links">Contacto</a>
 					</li>
 					
 				</ul>
@@ -142,7 +142,7 @@
 		<section class="knowledge">
 			<div class="knowledge__container container">
 				<div class="knowledge__texts">
-					<h2 class="subtitle">Conocenos</h2>
+					<h2 class="subtitle" id="nosotros">Conocenos</h2>
 					<p class="knowledge__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
 						Quae quisquam perferendis soluta. Sed beatae temporibus harum ipsum dicta, nam quam amet 
 						nesciunt vero impedit deserunt fuga ipsam ex cumque eos.</p>
@@ -155,7 +155,7 @@
 		</section>
 
 		<section class="price container">
-			<h2 class="subtitle">Obten el plan perfecto para ti</h2>
+			<h2 class="subtitle" id="paquetes">Obten el plan perfecto para ti</h2>
 			<div class="price__table">
 				<div class="price__element">
 					<p class="price__name">Starter</p>
@@ -235,20 +235,136 @@
 	</main>
 	
 	
-		<footer class="bg-light">
+		<footer class="bg-light" id="contacto">
 			<div class="container">
 			  <div class="row">
 				<div class="col-md-4">
-				  <h4>Contactactano</h4>
+					<h1>Formulario de contacto</h1>
+   
+					<div id="section1">
+						<h2>Sección 1 - Nombre y Edad</h2>
+						<label for="nombre">Nombre:</label>
+						<input type="text" id="nombre" name="nombre" class="required"><br><br>
+						
+						<label for="edad">Edad:</label>
+						<input type="number" id="edad" name="edad" class="required"><br><br>
+						
+						<button type="button" onclick="nextSection()">Siguiente</button>
+					  </div>
+					  
+					  <div id="section2" style="display:none">
+						<h2>Sección 2 - Teléfono y Email</h2>
+						<label for="telefono">Teléfono:</label>
+						<input type="tel" id="telefono" name="telefono" class="required"><br><br>
+						
+						<label for="email">Email:</label>
+						<input type="email" id="email" name="email" class="required"><br><br>
+						
+						<button type="button" onclick="prevSection()">Anterior</button>
+						<button type="button" onclick="nextSection()">Siguiente</button>
+					  </div>
+					  
+					  <div id="section3" style="display:none">
+						<h2>Sección 3 - Cuando te gustaria iniciar  ? </h2>
+						<label for="fecha">Fecha:</label>
+						<input type="date" id="fecha" name="fecha" class="required"><br><br>
+						
+						
+						
+						<button type="button" onclick="prevSection()">Anterior</button>
+						<button type="button" onclick="nextSection()">Siguiente</button>
+					  </div>
+					  
+					  <div id="section4" style="display:none">
+						<h2>Sección 4 - Enfermedades</h2>
+						<label for="enfermedad">¿Padece alguna enfermedad que complique la actividad física?</label><br>
+						<input type="radio" id="si" name="enfermedad" value="si">
+						<label for="si">Sí</label><br>
+						<input type="radio" id="no" name="enfermedad" value="no">
+						<label for="no">No</label><br><br>
+						
+						<button type="button" onclick="prevSection()">Anterior</button>
+						<button type="submit">Enviar</button>
+					  </div>
+					  
+					  <script>
+					  var currentSection = 1;
+					  var sectionCount = 4;
+					  
+					  function nextSection() {
+						if (currentSection < sectionCount) {
+						  document.getElementById("section" + currentSection).style.display = "none";
+						  currentSection++;
+						  document.getElementById("section" + currentSection).style.display = "block";
+						}
+					  }
+					  
+					  function prevSection() {
+                     if (currentSection > 1) {
+                       document.getElementById('section' + currentSection).style.display = 'none';
+                       currentSection--;
+                      document.getElementById('section' + currentSection).style.display = 'block';
+					}
+				}
+					
+						$(document).ready(function() {
+						  
+						  $.validator.addMethod("edadValida", function(value, element) {
+							var edad = parseInt(value);
+							return edad > 18;
+						  }, "Debes ser mayor de edad para enviar el formulario");
+					  
+						  
+						  $("#formulario").validate({
+							rules: {
+							  nombre: {
+								required: true,
+								minlength: 3
+							  },
+							  edad: {
+								required: true,
+								digits: true,
+								edadValida: true
+							  },
+							  telefono: {
+								required: true,
+								digits: true,
+								minlength: 8,
+								maxlength: 10
+							  },
+							  email: {
+								required: true,
+								email: true
+							  },
+							  fecha: {
+								required: true,
+								date: true
+							  },
+							  enfermedad: {
+								required: true
+							  }
+							},
+							messages: {
+							  nombre: {
+								required: "ingresa tu nombre",
+								minlength: "Tu nombre debe tener al menos 3 caracteres"
+							  },
+							  edad: {
+								required: "ingresa tu edad",
+								digits: "Ingresa solo números",
+								edadValida: "Debes ser mayor de edad para enviar el formulario"
+							  },
+							  telefono: {
+								required: "ingresa tu número de teléfono",
+				  
+				<h4>Encontranos en</h4>
 				  <ul class="list-unstyled">
 					<li><i class="fa fa-phone"></i> +54 9 2222-777777</li>
 					<li><i class="fa fa-map-marker"></i> 123 Main St, Ciudad, Estado CP 12345</li>
-					<li><i class="fa fa-envelope"></i> info@example.com</li>
 				  </ul>
 				</div>
-			  </div>
-			</div>
-			<div class="email container">
+			 
+				<div class="email container">
 				<a href="https://www.facebook.com/titanfitness">Facebook</a>
 		  		<a href="https://www.instagram.com/titanfitness">Instagram</a>
 			</div>
