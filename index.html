@@ -5,15 +5,74 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
-	<link rel="stylesheet" href="../Trabajo Integrador/css/style.css">
-   	<link rel="stylesheet" href="../Trabajo Integrador/css/normalize.css">
-	
+	<link rel="stylesheet" href="./css/style.css">
+   	<link rel="stylesheet" href="./css/normalize.css">
+	 
+	   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	   <script src="./js/var_datos.js"></script>
+	 <script> 
+	   $(document).ready(function() {
+		$('.turnos').click(function() {
+			window.open("https://calendly.com/justsmilefotos/turno?primary_color=c1b71c", "Turno", "width=600,height=400");
+		});
+	});
+	</script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
+	<script>
+	 const buttons = document.querySelectorAll('.turnos');
+     let planSeleccionado = '';
+
+      buttons.forEach(button => {
+      button.onclick = () => {
+      const nombrePlan = button.parentNode.querySelector('.price__name').innerText;
+      planSeleccionado = nombrePlan;
+      console.log('Plan seleccionado:', planSeleccionado);
+  }
+  
+});
+
+	</script>
+  
+    <script>
+		$(document).ready(function() {
+     $('button.turnos').click(function() {
+     var selectedOption = $(this).siblings('p.price__name').text();
+     console.log('Se selecciono el plan: ' + selectedOption);
+  });
+});
+  
+
+	</script>
+	<script>
+		$(document).ready(function() {
+     $('#submit-btn').click(function(e) {
+     e.preventDefault();
+
+     var formData = {
+      name: $('input[name=name]').val(),
+      email: $('input[name=email]').val()
+    };
+
+     $.ajax({
+      type: 'POST',
+      url: 'https://github.com/VictorSpadoni/ArgentinaProgramaClases/blob/main/info.php',
+      data: formData,
+      success: function(response) {
+        console.log(response);
+      },
+      error: function(xhr, status, error) {
+        console.log(xhr.responseText);
+      }
+    });
+  });
+});
+	</script>
 </head>
 <body>
 	<header class="hero">
 		<nav class="nav container">
 			<div class="nav__logo">
-				<img class= "nav__title" src="../Trabajo Integrador/Imagenes/44119286-edit-20230413165947.jpg" alt="Logo del Gimnasio XYZ" width="70px" height="60px">
+				<img class= "nav__title" src="./Imagenes/44119286.jpg" alt="Logo del Gimnasio XYZ" width="70px" height="60px">
 			</div>
 			<ul class="nav__link nav__link--menu">
 				<li class="nav__items">
@@ -28,11 +87,13 @@
 				<li class="nav__items">
 					<a href="#" class="nav__links">Contacto</a>
 					</li>
-					<img src="./Imagenes/circle-close-multiple-svgrepo-com.svg" class="nav__close">
+					
 				</ul>
 				<div class="nav__menu">
-					<img src="../Trabajo Integrador/Imagenes/menu-burger-svgrepo-com.svg" class="nav__img">
+					
 				</div>
+			
+				
 		</nav>
 	
 	<section class="hero__container container">
@@ -103,7 +164,8 @@
 						<p class="price__features">Clase de prueba</p>
 						<p class="price__features">1 modalidad a tu elección</p>
 					</div>
-					<a href="#" class="price__reserva">Empieza ahora</a>
+					
+					<button class="turnos">Reserva tu turno </button>
 				</div>	
 			
 				<div class="price__element">
@@ -114,7 +176,8 @@
 						<p class="price__features">2 Veces por semana</p>
 						<p class="price__features">1 modalidad a tu elección</p>
 					</div>
-					<a href="#" class="price__reserva">Empieza ahora</a>
+					
+					<button class="turnos">Reserva tu turno </button>
 				</div>	
 				<div class="price__element price__element--best">
 					<p class="price__name">Fit-Flex</p>
@@ -124,7 +187,7 @@
 						<p class="price__features">3 Veces por semana</p>
 						<p class="price__features">1 modalidad a tu elección</p>
 					</div>
-					<a href="#" class="price__reserva">Empieza ahora</a>
+					<button class="turnos">Reserva tu turno </button>
 				</div>	
 				<div class="price__element">
 					<p class="price__name">Ultimate Shape</p>
@@ -134,7 +197,8 @@
 						<p class="price__features">4 Veces por semana</p>
 						<p class="price__features">1 modalidad a tu elección</p>
 					</div>
-					<a href="#" class="price__reserva">Empieza ahora</a>
+					
+					<button class="turnos">Reserva tu turno </button>
 				</div>
 				<div class="price__element">
 					<p class="price__name">Extrame Fit</p>
@@ -145,18 +209,22 @@
 						<p class="price__features">2 modalidad a tu elección</p>
 						<p class="price__feauturs">O 5 veces por semana, 1 modalidad a tu elección</p>
 					</div>
-					<a href="#" class="price__reserva">Empieza ahora</a>
+					
+					<button class="turnos">Reserva tu turno </button>
 				</div>
 				<div class="price__element">
 					<p class="price__name">Peak Performance</p>
 					<h3 class="price__price">$8000/mes</h3>
+				
 
 					<div class="price__items">
 						<p class="price__features">5 Veces por semana</p>
 						<p class="price__features">Modalidad libre</p>
 					</div>
-					<a href="#" class="price__reserva">Empieza ahora</a>
+					
+					<button class="turnos">Reserva tu turno </button>
 				</div>	
+				 
 				
 				
 				
@@ -164,5 +232,39 @@
 			</div>
 		</section>
 	</main>
+	<footer>
+		
+		
+		  <div>
+					<h1>Formulario de contacto</h1>
+   
+					 <form action="enviar" method="post">
+						<label>Nombre:</label>
+						<input type="text" name="nombre" class="validate" required>
+						<br>
+						<label>Numero de contacto</label>
+						<input type="tel" name="numero" class="validate" required>
+						<br>
+						<label>Correo electrónico:</label>
+						<input type="email" name="correo" class="validate" required>
+						<br>
+						<label>Cuándo te gustaria inicar?</label>
+						<input type="date" name="fecha" class="validate" required>
+						<br>
+						<label>Comentanos tus dudas:</label>
+						<textarea name="mensaje" ></textarea>
+						<br>
+						<input type="submit" id="submit-btn" value="Enviar">
+    
+					</form>
+				</div>
+		<div>
+			<address>
+		  Contacto: <a href="mailto:titanfitness@gmail.com">titanfitness@gmail.com</a>
+		</address>Sígueme en: 
+		  <a href="https://www.facebook.com/titanfitness">Facebook</a> | 
+		  <a href="https://www.instagram.com/titanfitness">Instagram</a></div>
+		 	  
+		  </footer>
 </body>
 </html>
