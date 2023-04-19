@@ -1,40 +1,52 @@
-var datos = {
-    nombre: {
-        presence: true,
-        length: {
-            minimum: 3,
-            message: "debe tener al menos 3 caracteres"
-        }
-    },
-    numero: {
-        presence: true,
-        numericality: true,
-        length: {
-            minimum: 8,
-            maximum: 10,
-            message: "debe tener entre 8 y 10 dígitos"
-        }
-    },
-    correo: {
-        presence: true,
-        email: true
-    },
-    fecha: {
-        presence: true,
-        date: true
-    }
+ 
+$(document).ready(function() {
+ $('.turnos').click(function() {
+     window.open("https://calendly.com/justsmilefotos/turno?primary_color=c1b71c", "Turno", "width=600,height=400");
+ });
+});
+
+
+
+const buttons = document.querySelectorAll('.turnos');
+let planSeleccionado = '';
+
+buttons.forEach(button => {
+button.onclick = () => {
+const nombrePlan = button.parentNode.querySelector('.price__name').innerText;
+planSeleccionado = nombrePlan;
+console.log('Plan seleccionado:', planSeleccionado);
+}
+
+});
+
+$(document).ready(function() {
+$('button.turnos').click(function() {
+var selectedOption = $(this).siblings('p.price__name').text();
+console.log('Se selecciono el plan: ' + selectedOption);
+});
+});
+
+
+
+ $(document).ready(function() {
+$('#submit-btn').click(function(e) {
+e.preventDefault();
+
+var formData = {
+name: $('input[name=name]').val(),
+email: $('input[name=email]').val()
 };
- document.addEventListener("DOMContentLoaded", function() {
-    document.getElementById("submit-btn").addEventListener("click", function(event) {
-        event.preventDefault();
-        var form = document.querySelector("form");
-        var errors = validate(form, constraints);
-        if (errors) {
-            
-            console.log(errors);
-        } else {
-       
-            form.submit();
-        }
-    }, false);
+
+$.ajax({
+type: 'POST',
+url: 'https://github.com/VictorSpadoni/ArgentinaProgramaClases/blob/main/info.php',
+data: formData,
+success: function(response) {
+ console.log(response);
+},
+error: function(xhr, status, error) {
+ console.log(xhr.responseText);
+}
+});
+});
 });

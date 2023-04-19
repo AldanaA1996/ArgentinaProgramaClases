@@ -229,38 +229,29 @@ body {
 
 .turnos {
 	display: block;
-	padding: 20px 0;
-	border-radius: 10px;
-	text-decoration: none;
-	font-weight: 600;
-	background-color: var(--color-reserva) ;
-    display: inline-block;
-	background-color: #dbbf1d;
-	justify-self: center;
-	color: black;
-	text-decoration: none;
 	padding: 13px 20px;
 	border-radius: 10px;
+	border: none;
+	text-decoration: none;
 	font-weight: 600;
+	display: inline-block;
+	background-color: #ffffff;
+	justify-self: center;
+	color: black;
+	
 }
 
 .turnos1 {
-	
-		display: block;
-		padding: 20px 0;
-		border-radius: 10px;
-		text-decoration: none;
-		font-weight: 600;
-		background-color: var(--color-reserva) ;
-		display: inline-block;
-		background-color: #dbbf1d;
-		justify-self: center;
-		color: black;
-		text-decoration: none;
-		padding: 13px 20px;
-		border-radius: 10px;
-		font-weight: 600;
-	
+	display: block;
+	padding: 13px 20px;
+	border-radius: 10px;
+	border: none;
+	text-decoration: none;
+	font-weight: 600;
+	display: inline-block;
+	background-color: #ffffff;
+	justify-self: center;
+	color: black;
 }
 .contact__container{
     display: flex;

@@ -11,38 +11,18 @@
 	 
 	   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	   <script src="./js/var_datos.js"></script>
-	 <script> 
-	   $(document).ready(function() {
-		$('.turnos').click(function() {
-			window.open("https://calendly.com/justsmilefotos/turno?primary_color=c1b71c", "Turno", "width=600,height=400");
-		});
-	});
+	 
+
 	</script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
+
 	<script>
-	 const buttons = document.querySelectorAll('.turnos');
-     let planSeleccionado = '';
-
-      buttons.forEach(button => {
-      button.onclick = () => {
-      const nombrePlan = button.parentNode.querySelector('.price__name').innerText;
-      planSeleccionado = nombrePlan;
-      console.log('Plan seleccionado:', planSeleccionado);
-  }
-  
-});
-
-	</script>
-  
-    <script>
 		$(document).ready(function() {
-     $('button.turnos').click(function() {
-     var selectedOption = $(this).siblings('p.price__name').text();
-     console.log('Se selecciono el plan: ' + selectedOption);
+  $('button.turnos1').click(function() {
+    var selectedOption = $(this).siblings('.price__name').text();
+    console.log('Se seleccionó el plan: ' + selectedOption);
   });
 });
-  
-
 	</script>
 	<script>
 		$(document).ready(function() {
@@ -75,7 +55,7 @@
 			<div class="nav__logo">
 				<img class= "nav__title" src="./Imagenes/44119286.jpg" alt="Logo del Gimnasio" width="70px" height="60px">
 			</div>
-			<ul class="nav__link nav__link--menu">
+			<ul class="nav_link nav_link--menu">
 				<li class="nav__items">
 					<a href="#" class="nav__links">Inicio</a>
 				</li>
@@ -167,7 +147,7 @@
 						<p class="price__features">10 cupos por día, en cada turno. Reserva el que mas se acomode a tus horarios</p>
 					</div>
 					
-					<button class="turnos1" onclick="window.open('starter.html', '_blank')";>Reserva tu turno </button>
+					<button class="turnos1" id="turnos1" onclick="window.open('starter.html', '_blank')";>Reserva tu turno </button>
 				</div>	
 			
 				<div class="price__element">
@@ -180,9 +160,9 @@
 						<p class="price__features">10 cupos por día, en cada turno. Reserva el que mas se acomode a tus horarios</p>
 					</div>
 					
-					<button class="turnos">Reserva tu turno </button>
+					<button class="turnos1" onclick="window.open('starter.html', '_blank')";>Reserva tu turno </button>
 				</div>	
-				<div class="price__element price__element--best">
+				<div class="price_element price_element--best">
 					<p class="price__name">Fit-Flex</p>
 					<h3 class="price__price">$3500/mes</h3>
 
@@ -191,7 +171,7 @@
 						<p class="price__features">1 modalidad a tu elección</p>
 						<p class="price__features">10 cupos por día, en cada turno. Reserva el que mas se acomode a tus horarios</p>
 					</div>
-					<button class="turnos">Reserva tu turno </button>
+					<button class="turnos1" onclick="window.open('starter.html', '_blank')";>Reserva tu turno </button>
 				</div>	
 				<div class="price__element">
 					<p class="price__name">Ultimate Shape</p>
@@ -203,7 +183,7 @@
 						<p class="price__features">10 cupos por día, en cada turno. Reserva el que mas se acomode a tus horarios</p>
 					</div>
 					
-					<button class="turnos">Reserva tu turno </button>
+					<button class="turnos1" onclick="window.open('starter.html', '_blank')";>Reserva tu turno </button>
 				</div>
 				<div class="price__element">
 					<p class="price__name">Extrame Fit</p>
@@ -215,7 +195,7 @@
 						<p class="price__feauturs">O 1 modalidad, 5 veces por semana</p>
 					</div>
 					
-					<button class="turnos">Reserva tu turno </button>
+					<button class="turnos1" onclick="window.open('starter.html', '_blank')";>Reserva tu turno </button>
 				</div>
 				<div class="price__element">
 					<p class="price__name">Peak Performance</p>
@@ -228,7 +208,7 @@
 						<p class="price__features">10 cupos por día, en cada turno. Reserva el que mas se acomode a tus horarios</p>
 					</div>
 					
-					<button class="turnos">Reserva tu turno </button>
+					<button class="turnos1" onclick="window.open('starter.html', '_blank')";>Reserva tu turno </button>
 				</div>	
 			</div>
 		</section>
@@ -307,65 +287,8 @@
                       document.getElementById('section' + currentSection).style.display = 'block';
 					}
 				}
+				</script>	
 					
-						$(document).ready(function() {
-						  
-						  $.validator.addMethod("edadValida", function(value, element) {
-							var edad = parseInt(value);
-							return edad > 18;
-						  }, "Debes ser mayor de edad para enviar el formulario");
-					  
-						  
-						  $("#formulario").validate({
-							rules: {
-							  nombre: {
-								required: true,
-								minlength: 3
-							  },
-							  edad: {
-								required: true,
-								digits: true,
-								edadValida: true
-                             },
-							  telefono: {
-								required: true,
-								digits: true,
-								minlength: 8,
-								maxlength: 10
-							  },
-							  email: {
-								required: true,
-								email: true
-							  },
-							  fecha: {
-								required: true,
-								date: true
-							  },
-							  enfermedad: {
-								required: true
-							  }
-							},
-							messages: {
-							  nombre: {
-								required: "ingresa tu nombre",
-								minlength: "Tu nombre debe tener al menos 3 caracteres"
-							  },
-							  edad: {
-								required: "ingresa tu edad",
-								digits: "Ingresa solo números",
-								edadValida: "Debes ser mayor de edad para enviar el formulario"
-                            
-							  },
-                              telefono: {
-                              required: "Ingresa tu número de teléfono",
-                             digits: "Ingresa solo números",
-                             minlength: "El número de teléfono debe tener al menos 8 dígitos",
-                             maxlength: "El número de teléfono no puede tener más de 10 dígitos"
-                            }
-    					}
-  					});
-				});
-					  </script>
 				  
 				<h4>Encontranos</h4>
 				  <ul class="list-unstyled">
