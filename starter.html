@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/starter.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+    <script src="./js/starter.js"></script>
+    <title>Starter Pack</title>
+
+</head>
+<body>
+   
+    <div class="container">
+    <form class="inscripcion" id="miFormulario" method="get" action="">
+        <fieldset>
+        <div class="seccion-form current" id="section1">
+            <h2>Paso 1</h2>
+          <label for="nombre">Nombre y Apellido</label><br>
+          <input type="text" name="nombre" id="nombre" required><br>
+          <label for="edad">Edad:</label><br>
+          <input type="number" id="edad" name="edad" required><br>
+          <button type="button" class="nextSection">Siguiente</button>
+          
+        </div>
+        <div class="seccion-form" id="section2">
+            <h2>Paso 2</h2>
+          <label for="phone">Teléfono:</label><br>
+          <input type="tel" id="phone" name="phone" required><br>
+          <label for="email">Email:</label><br>
+          <input type="email" id="email" name="email" required><br>
+        <button type="button" class="prevSection">Anterior</button>
+          <button type="button"  class="nextSection">Siguiente</button>
+        </div>
+        <div class="seccion-form" id="section3">
+            <h2>Paso 3</h2>
+            <h4>¿Cuando te gustaria iniciar? </h4>
+            <label for="fecha">Fecha:</label>
+            <input type="date" id="fecha" name="fecha"><br><br>
+           <button type="button" class="prevSection">Anterior</button>
+            <button type="button" class="nextSection">Siguiente</button>
+        </div>
+        <div class="seccion-form" id="section4">
+            <h2>Paso 4</h2>
+            <h4>Enfermedades</h4>
+            <label for="enfermedad">¿Padece alguna enfermedad que complique la actividad física?</label><br>
+            <input type="radio" id="si" name="enfermedadSi" value="si">
+            <label for="si">Sí</label><br>
+            <input type="radio" id="no" name="enfermedadNo" value="no">
+            <label for="no">No</label><br><br>
+            <button type="button" class="prevSection">Anterior</button>
+            <button type="button" onclick="guardarInfo()">Enviar y guardar comprobante</button>        
+            </div>
+        </fieldset>
+      </form>
+    </div>
+    
+      
+    
+     
+
+</body>
+
+</html>
