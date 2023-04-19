@@ -147,7 +147,7 @@
 						<p class="price__features">10 cupos por día, en cada turno. Reserva el que mas se acomode a tus horarios</p>
 					</div>
 					
-					<button class="turnos1" id="turnos1" onclick="window.open('starter.html', '_blank')";>Reserva tu turno </button>
+					<button class="turnos1" id="turnos1" onclick="window.open('turnero.html', '_blank')";>Reserva tu turno </button>
 				</div>	
 			
 				<div class="price__element">
@@ -160,9 +160,9 @@
 						<p class="price__features">10 cupos por día, en cada turno. Reserva el que mas se acomode a tus horarios</p>
 					</div>
 					
-					<button class="turnos1" onclick="window.open('starter.html', '_blank')";>Reserva tu turno </button>
+					<button class="turnos1" onclick="window.open('turnero.html', '_blank')";>Reserva tu turno </button>
 				</div>	
-				<div class="price_element price_element--best">
+				<div class="price__element price__element--best">
 					<p class="price__name">Fit-Flex</p>
 					<h3 class="price__price">$3500/mes</h3>
 
@@ -171,7 +171,7 @@
 						<p class="price__features">1 modalidad a tu elección</p>
 						<p class="price__features">10 cupos por día, en cada turno. Reserva el que mas se acomode a tus horarios</p>
 					</div>
-					<button class="turnos1" onclick="window.open('starter.html', '_blank')";>Reserva tu turno </button>
+					<button class="turnos1" onclick="window.open('turnero.html', '_blank')";>Reserva tu turno </button>
 				</div>	
 				<div class="price__element">
 					<p class="price__name">Ultimate Shape</p>
@@ -183,7 +183,7 @@
 						<p class="price__features">10 cupos por día, en cada turno. Reserva el que mas se acomode a tus horarios</p>
 					</div>
 					
-					<button class="turnos1" onclick="window.open('starter.html', '_blank')";>Reserva tu turno </button>
+					<button class="turnos1" onclick="window.open('turnero.html', '_blank')";>Reserva tu turno </button>
 				</div>
 				<div class="price__element">
 					<p class="price__name">Extrame Fit</p>
@@ -195,7 +195,7 @@
 						<p class="price__feauturs">O 1 modalidad, 5 veces por semana</p>
 					</div>
 					
-					<button class="turnos1" onclick="window.open('starter.html', '_blank')";>Reserva tu turno </button>
+					<button class="turnos1" onclick="window.open('turnero.html', '_blank')";>Reserva tu turno </button>
 				</div>
 				<div class="price__element">
 					<p class="price__name">Peak Performance</p>
@@ -208,7 +208,7 @@
 						<p class="price__features">10 cupos por día, en cada turno. Reserva el que mas se acomode a tus horarios</p>
 					</div>
 					
-					<button class="turnos1" onclick="window.open('starter.html', '_blank')";>Reserva tu turno </button>
+					<button class="turnos1" onclick="window.open('turnero.html', '_blank')";>Reserva tu turno </button>
 				</div>	
 			</div>
 		</section>
@@ -216,81 +216,7 @@
 	
 	
 		<footer class="bg-light" id="contacto">
-			<div class="form_container">
-			  <div class="row">
-				
-				<h1>Formulario de contacto</h1>
-   
-					<div id="section1">
-						<h4>Nombre y Edad</h4>
-						<label for="nombre">Nombre:</label>
-						<input type="text" id="nombre" name="nombre" required><br><br>
-						
-						<label for="edad">Edad:</label>
-						<input type="number" id="edad" name="edad" required><br><br>
-						
-						<button type="button" onclick="nextSection()">Siguiente</button>
-					  </div>
-					  
-					  <div id="section2" style="display:none">
-						<h4>Teléfono y Email</h4>
-						<label for="telefono">Teléfono:</label>
-						<input type="tel" id="telefono" name="telefono" required><br><br>
-						
-						<label for="email">Email:</label>
-						<input type="email" id="email" name="email" required><br><br>
-						
-						<button type="button" onclick="prevSection()">Anterior</button>
-						<button type="button" onclick="nextSection()">Siguiente</button>
-					  </div>
-					  
-					  <div id="section3" style="display:none">
-						<h4>¿Cuando te gustaria iniciar? </h4>
-						<label for="fecha">Fecha:</label>
-						<input type="date" id="fecha" name="fecha" required><br><br>
-						
-						
-						
-						<button type="button" onclick="prevSection()">Anterior</button>
-						<button type="button" onclick="nextSection()">Siguiente</button>
-					  </div>
-					  
-					  <div id="section4" style="display:none">
-						<h4>Enfermedades</h4>
-						<label for="enfermedad">¿Padece alguna enfermedad que complique la actividad física?</label><br>
-						<input type="radio" id="si" name="enfermedad" value="si">
-						<label for="si">Sí</label><br>
-						<input type="radio" id="no" name="enfermedad" value="no">
-						<label for="no">No</label><br><br>
-						
-						<button type="button" onclick="prevSection()">Anterior</button>
-						<button type="submit">Enviar</button>
-					  </div>
-					
-					 <script>
-
-					  var currentSection = 1;
-					  var sectionCount = 4;
-					  
-					  function nextSection() {
-						if (currentSection < sectionCount) {
-						  document.getElementById("section" + currentSection).style.display = "none";
-						  currentSection++;
-						  document.getElementById("section" + currentSection).style.display = "block";
-						}
-					  }
-					  
-					  function prevSection() {
-                     if (currentSection > 1) {
-                       document.getElementById('section' + currentSection).style.display = 'none';
-                       currentSection--;
-                      document.getElementById('section' + currentSection).style.display = 'block';
-					}
-				}
-				</script>	
-					
-				  
-				<h4>Encontranos</h4>
+			<h4>Encontranos</h4>
 				  <ul class="list-unstyled">
 					<li><i class="fa fa-phone"></i> +54 9 2222-777777</li>
 					<li><i class="fa fa-map-marker"></i> 123 Main St, Ciudad, Estado CP 12345</li>
